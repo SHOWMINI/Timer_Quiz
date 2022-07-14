@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz </title>
+</head>
+<body style="font-style: oblique; background-image: url('im1.jpeg'); background-repeat:
+no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-color:black;">
+<b><div style="background-Color : white; border: 45px solid royalblue;margin-right:16.5em;
+margin-left:16.5em; padding: 2.7em;" >
+<h1 style="color:red"><span style="background-Color:#ddeeee"> QUIZ <span></h1>
+<h1 style="color:red"><span style="background-Color:#eeeeff"> ANSWER THE
+QUESTIONS <span></h1>
+<div id="count" style="margin-right: 34px; text-align: right; color: red	; font-style:
+oblique; font-size: 60px;"><button onclick="ab()">Start</button>TIMER</div>
+<div style="background-Color:lightyellow;">
+<br><br>
+Q1. Which attribute specifies a unique alphanumeric identifier to be associated with an element? <br>
+<input type="radio" name="question1" > class <br>
+<input type="radio" name="question1" id="correct1"> id <br>
+<input type="radio" name="question1" > article <br>
+<input type="radio" name="question1" > html <br><br>
+<hr>
+Q2. The ___ attribute specifies an inline style associated with an element, which determines the rendering of the affected element. <br>
+<input type="radio" name="question2" > dir <br>
+<input type="radio" name="question2" id="correct2"> style <br>
+<input type="radio" name="question2" > class <br>
+<input type="radio" name="question2" > article <br><br>
+<hr>
+Q3. Web development and software development are one and the same thing. <br>
+<input type="radio" name="question3" > Yes <br>
+<input type="radio" name="question3" id="correct3"> No <br><br>
+<hr>
+Q4. Which of the following is the attribute that is used to set a global identifier for a microdata item? <br>
+<input type="radio" name="question4" > key <br>
+<input type="radio" name="question4" > id <br>
+<input type="radio" name="question4" > itemclss <br>
+<input type="radio" name="question4" id="correct4"> itemid <br><br>
+<hr>
+Q5. Web-based systems are often document-oriented containing static or dynamic content. <br>
+<input type="radio" name="question5" id="correct5"> Yes <br>
+<input type="radio" name="question5" > No <br>
+</div>
+<input type="submit" name="submit" value="submitQuiz" onclick="result()">
+</div></b>
+<script type="text/javascript">
+function result() {
+// body...
+var score=0;
+if (document.getElementById('correct1').checked)
+{
+score++;
+}
+if (document.getElementById('correct2').checked)
+{
+score++;
+}
+if (document.getElementById('correct3').checked)
+{
+score++;
+}
+if (document.getElementById('correct4').checked)
+{
+score++;
+}
+if (document.getElementById('correct5').checked)
+{
+score++;
+}
+document.write("Your score is:"+score);
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write(" Correct Answers are:");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write(" 1. id")
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write(" 2. style")
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write(" 3. No")
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write(" 4. itemid")
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write(" 5. Yes")
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+}
+var count = 100;
+var interval = setInterval(function ab(){
+document.getElementById('count').innerHTML=count;
+count--;
+if (count === 0){
+clearInterval(interval);
+document.getElementById('count').innerHTML='Done';
+// or...
+alert("You're out of time!");
+}
+}, 1000);
+</script>
+</body>
+</html>
